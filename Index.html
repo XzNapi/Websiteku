@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Sertifikat Otomatis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Generator Sertifikat Otomatis</h1>
+    
+    <div class="container">
+        <div class="main-content">
+            <p>Silakan upload template sertifikat Anda. Pindahkan teks nama ke posisi yang diinginkan.</p>
+            <canvas id="sertifikat-canvas" width="800" height="566"></canvas>
+        </div>
+        
+        <div class="sidebar">
+            <h3>1. Upload Template</h3>
+            <input type="file" id="imageLoader" accept="image/*">
+            
+            <hr>
+            
+            <h3>2. Tambah Teks Nama</h3>
+            <button id="addText">Tambah Teks Nama</button>
+            <p><i>(Klik teks di kanvas untuk mengaturnya)</i></p>
+
+            <hr>
+
+            <h3>3. Atur Teks</h3>
+            <label for="fontSelector">Pilih Font:</label>
+            <select id="fontSelector">
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+            
+            <div class="align-buttons">
+                <button id="alignLeft">Rata Kiri</button>
+                <button id="alignCenter">Rata Tengah</button>
+                <button id="alignRight">Rata Kanan</button>
+            </div>
+
+            <hr>
+
+            <h3>4. Masukkan Nama Peserta</h3>
+            <textarea id="nameList" rows="10" placeholder="Masukkan satu nama per baris...
+Adit
+Budi
+Clara
+Doni"></textarea>
+            
+            <hr>
+
+            <h3>5. Download Hasil</h3>
+            <button id="downloadButton" class="download-btn">Generate & Download ZIP</button>
+            <div id="status"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
